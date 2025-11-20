@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="my" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO & Meta Tags (Google ရှာရင်တွေ့ဖို့ အရေးကြီးသောအပိုင်း) ================= -->
+    <title>YLA Game Shop - Ye Linn Aung | Best Game Coins in Myanmar</title>
+    <meta name="description" content="Ye Linn Aung ၏ YLA Game Shop (ylagameshop) သည် မြန်မာနိုင်ငံရှိ ယုံကြည်စိတ်ချရဆုံး Mobile Legends, PUBG, Free Fire ဂိမ်းကွိုင်အရောင်းဆိုင်ဖြစ်သည်။">
+    <meta name="keywords" content="ye linn aung, ye linn aung vlog, yla, ylagameshop, yla game shop, yelinnaung.com, ylagameshop.com, yelinnaungstore, gamestore, codecanyon, mobile legends diamond, pubg uc, game coins, ဂိမ်းကွိုင်များ">
+    <meta name="author" content="Ye Linn Aung">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook (Facebook မှာ Link ချရင် ပုံလှလှလေးပေါ်ဖို့) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yla.miniapp.zone/myapp">
+    <meta property="og:title" content="YLA Game Shop - Level Up Your Gaming Experience">
+    <meta property="og:description" content="ဂိမ်းကွိုင်များကို ယုံကြည်စိတ်ချစွာ ဝယ်ယူနိုင်ပါပြီ။ App ဒေါင်းလုဒ်ဆွဲရန် နှိပ်ပါ။">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YLA Game Shop - Best Game Coins">
+    <meta name="twitter:description" content="Cheap and fast game top-up service in Myanmar.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3">
+
+    <!-- Google Structured Data (Google ကို ဒါသည် ဆိုင်တစ်ဆိုင်ဖြစ်ကြောင်း ပြောပြခြင်း) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "YLA Game Shop",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e",
+      "description": "မြန်မာနိုင်ငံရဲ့ ယုံကြည်စိတ်ချရဆုံး ဂိမ်းကွိုင်အရောင်းဆိုင်",
+      "url": "https://yla.miniapp.zone/myapp",
+      "telephone": "09-123456789",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yangon",
+        "addressCountry": "MM"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+    <!-- ================= End SEO Tags ================= -->
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Padauk for Burmese) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        burmese: ['Padauk', 'sans-serif'],
+                        gaming: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        neonPurple: '#b026ff',
+                        neonBlue: '#00f3ff',
+                        neonGold: '#FFD700', /* Gold Color Added */
+                        darkBg: '#0f172a',
+                        cardBg: 'rgba(30, 41, 59, 0.7)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, boxShadow: '0 0 20px #b026ff' },
+                            '50%': { opacity: .8, boxShadow: '0 0 15px #FFD700' }, /* Gold Glow */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(176, 38, 255, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 25%); /* Gold Bg Tint */
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.15); /* Slight gold border */
+        }
+
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Gold border for nav */
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #b026ff, #FFD700); /* Gold-Purple Scrollbar */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFD700; 
+        }
+
+        /* Text Gradient - Gold Mixed */
+        .text-gradient {
+            background: linear-gradient(to right, #FFD700, #F59E0B, #b026ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card Hover Effect */
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.3); /* Gold Shadow */
+            border-color: #FFD700;
+        }
+
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-burmese antialiased selection:bg-neonGold selection:text-black">
+
+    <!-- Decoration Circles -->
+    <div class="fixed top-20 left-[-100px] w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-float"></div>
+    <div class="fixed bottom-20 right-[-100px] w-64 h-64 bg-yellow-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-float" style="animation-delay: 2s"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <!-- Logo Image: Replace src with your image file (e.g., src="logo.png") -->
+                    <img src="https://placehold.co/100x100/1e293b/FFD700?text=LOGO" alt="YLA Logo" class="w-12 h-12 rounded-full border-2 border-neonGold shadow-[0_0_15px_rgba(255,215,0,0.5)] object-cover hover:scale-110 transition-transform duration-300">
+                    
+                    <span class="font-gaming text-2xl font-bold tracking-wider text-white">YLA <span class="text-neonGold">GAME SHOP</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-neonGold px-3 py-2 rounded-md text-sm font-medium transition-colors">ပင်မစာမျက်နှာ</a>
+                        <a href="#games" class="hover:text-neonGold px-3 py-2 rounded-md text-sm font-medium transition-colors">ဂိမ်းများ</a>
+                        <a href="#tutorials" class="hover:text-neonGold px-3 py-2 rounded-md text-sm font-medium transition-colors">နည်းလမ်းများ</a>
+                        <a href="#contact" class="hover:text-neonGold px-3 py-2 rounded-md text-sm font-medium transition-colors">ဆက်သွယ်ရန်</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-300 hover:text-neonGold hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">ပင်မစာမျက်နှာ</a>
+                <a href="#games" class="text-gray-300 hover:text-neonGold hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">ဂိမ်းများ</a>
+                <a href="#tutorials" class="text-gray-300 hover:text-neonGold hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">နည်းလမ်းများ</a>
+                <a href="#contact" class="text-gray-300 hover:text-neonGold hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">ဆက်သွယ်ရန်</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-neonGold/50 bg-neonGold/10 text-neonGold text-sm font-semibold animate-bounce shadow-[0_0_10px_rgba(255,215,0,0.3)]">
+                🚀 No.1 Trusted Game Shop
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-gaming mb-6 leading-tight reveal active">
+                Level Up Your <br>
+                <span class="text-gradient drop-shadow-lg">Gaming Experience</span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 font-burmese mb-10 reveal active delay-100">
+                မြန်မာနိုင်ငံရဲ့ စိတ်ချရဆုံး ဂိမ်းကွိုင်အရောင်းဆိုင်။ <br>
+                မြန်ဆန်၊ တိကျ၊ စိတ်ချရသော ဝန်ဆောင်မှုဖြင့် ၂၄ နာရီ ဝန်ဆောင်မှုပေးနေပါပြီ။
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal active delay-200">
+                <!-- Direct Website Link (Gold Gradient) -->
+                <a href="https://yla.miniapp.zone/myapp" target="_blank" class="group relative px-8 py-4 bg-gradient-to-r from-neonGold via-yellow-500 to-orange-500 rounded-xl font-bold text-black shadow-lg hover:shadow-neonGold/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 overflow-hidden">
+                    <div class="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 skew-x-12 -translate-x-full"></div>
+                    <i class="fas fa-globe text-xl"></i>
+                    <span>Go To Website</span>
+                </a>
+
+                <!-- Direct APK Link -->
+                <a href="#" class="px-8 py-4 glass rounded-xl font-bold text-white hover:bg-white/10 border border-white/20 transition-all duration-300 hover:scale-105 hover:border-neonGold/50 flex items-center justify-center gap-3">
+                    <i class="fab fa-android text-xl text-green-400"></i>
+                    <span>Download APK</span>
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-8 reveal">
+                <div>
+                    <div class="text-3xl font-bold text-neonBlue">10k+</div>
+                    <div class="text-gray-400 text-sm">Customers</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-neonGold">24/7</div>
+                    <div class="text-gray-400 text-sm">Support</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-pink-500">5min</div>
+                    <div class="text-gray-400 text-sm">Delivery</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-green-400">100%</div>
+                    <div class="text-gray-400 text-sm">Trusted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold font-gaming mb-4"><span class="text-neonGold">POPULAR</span> GAMES</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-neonPurple to-neonGold mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-400">လူကြိုက်အများဆုံး ဂိမ်းကွိုင်များကို ဈေးနှုန်းသက်သာစွာ ဝယ်ယူနိုင်ပါသည်</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Game Card 1: MLBB -->
+                <div class="game-card glass rounded-2xl overflow-hidden relative group reveal">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Legends Diamond Topup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                        <h3 class="text-2xl font-bold text-white mb-1">Mobile Legends</h3>
+                        <p class="text-neonGold text-sm mb-4">Diamonds & Weekly Pass</p>
+                        <a href="https://yla.miniapp.zone/myapp" class="block w-full py-2 bg-neonGold/20 hover:bg-neonGold hover:text-black text-white border border-neonGold/30 text-center rounded-lg font-bold transition-all backdrop-blur-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> ဝယ်ယူမည်
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 2: PUBG -->
+                <div class="game-card glass rounded-2xl overflow-hidden relative group reveal">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PUBG Mobile UC Topup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                        <h3 class="text-2xl font-bold text-white mb-1">PUBG Mobile</h3>
+                        <p class="text-yellow-400 text-sm mb-4">UC Packs</p>
+                        <a href="https://yla.miniapp.zone/myapp" class="block w-full py-2 bg-neonGold/20 hover:bg-neonGold hover:text-black text-white border border-neonGold/30 text-center rounded-lg font-bold transition-all backdrop-blur-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> ဝယ်ယူမည်
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 3: Free Fire -->
+                <div class="game-card glass rounded-2xl overflow-hidden relative group reveal">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1533234427049-8e9e2af7e78e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Free Fire Diamond Topup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                        <h3 class="text-2xl font-bold text-white mb-1">Free Fire</h3>
+                        <p class="text-orange-400 text-sm mb-4">Diamonds</p>
+                        <a href="https://yla.miniapp.zone/myapp" class="block w-full py-2 bg-neonGold/20 hover:bg-neonGold hover:text-black text-white border border-neonGold/30 text-center rounded-lg font-bold transition-all backdrop-blur-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> ဝယ်ယူမည်
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 4: Roblox -->
+                <div class="game-card glass rounded-2xl overflow-hidden relative group reveal">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Roblox Robux Topup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                        <h3 class="text-2xl font-bold text-white mb-1">Roblox</h3>
+                        <p class="text-gray-300 text-sm mb-4">Robux</p>
+                        <a href="https://yla.miniapp.zone/myapp" class="block w-full py-2 bg-neonGold/20 hover:bg-neonGold hover:text-black text-white border border-neonGold/30 text-center rounded-lg font-bold transition-all backdrop-blur-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> ဝယ်ယူမည်
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 5: COC -->
+                <div class="game-card glass rounded-2xl overflow-hidden relative group reveal">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clash of Clans Gems Topup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                        <h3 class="text-2xl font-bold text-white mb-1">Clash of Clans</h3>
+                        <p class="text-green-400 text-sm mb-4">Gems & Gold Pass</p>
+                        <a href="https://yla.miniapp.zone/myapp" class="block w-full py-2 bg-neonGold/20 hover:bg-neonGold hover:text-black text-white border border-neonGold/30 text-center rounded-lg font-bold transition-all backdrop-blur-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> ဝယ်ယူမည်
+                        </a>
+                    </div>
+                </div>
+
+                <!-- More Games -->
+                <div class="glass rounded-2xl flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-700 hover:border-neonGold transition-colors cursor-pointer group reveal">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-transparent group-hover:border-neonGold">
+                        <i class="fas fa-plus text-2xl text-gray-400 group-hover:text-neonGold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-300 group-hover:text-white">More Games</h3>
+                    <p class="text-center text-sm text-gray-500 mt-2">Visit our website to see all games</p>
+                    <a href="https://yla.miniapp.zone/myapp" class="mt-4 text-neonGold hover:text-white text-sm font-bold">View All <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials Section -->
+    <section id="tutorials" class="py-20 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-gaming mb-2"><span class="text-neonGold">VIDEO</span> TUTORIALS</h2>
+                    <p class="text-gray-400">ဝယ်ယူနည်း နှင့် အသုံးပြုနည်း လမ်းညွှန်များ</p>
+                </div>
+                <a href="#" class="hidden md:inline-block text-neonGold hover:text-white transition-colors mt-4 md:mt-0">
+                    <i class="fab fa-youtube text-red-500 mr-2"></i> Watch more on YouTube
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div class="glass p-2 rounded-xl reveal group hover:border-neonGold/50 transition-colors">
+                    <div class="aspect-w-16 aspect-h-9 w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center relative overflow-hidden cursor-pointer">
+                        <!-- Fake Video Placeholder -->
+                        <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" alt="Website topup tutorial">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform border-2 border-white/20">
+                                <i class="fas fa-play text-white ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-white font-bold text-lg shadow-black drop-shadow-md">Website မှ ကိုယ်တိုင် ဝယ်ယူနည်း</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="glass p-2 rounded-xl reveal group hover:border-neonGold/50 transition-colors">
+                    <div class="aspect-w-16 aspect-h-9 w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center relative overflow-hidden cursor-pointer">
+                         <!-- Fake Video Placeholder -->
+                         <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" alt="App download tutorial">
+                         <div class="absolute inset-0 flex items-center justify-center">
+                             <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform border-2 border-white/20">
+                                 <i class="fas fa-play text-white ml-1"></i>
+                             </div>
+                         </div>
+                         <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-white font-bold text-lg shadow-black drop-shadow-md">App ဒေါင်းလုဒ်ဆွဲနည်း</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                 <a href="#" class="text-neonGold hover:text-white transition-colors">
+                    <i class="fab fa-youtube text-red-500 mr-2"></i> Watch more on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <!-- Bg Effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-transparent to-neonGold/5 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold font-gaming mb-8 reveal">GET IN <span class="text-neonGold">TOUCH</span></h2>
+            
+            <div class="glass rounded-2xl p-8 md:p-12 reveal hover:border-neonGold/30 transition-colors">
+                <p class="text-xl text-gray-300 mb-8">အကူအညီလိုအပ်ပါက (သို့) လက်ကားဝယ်ယူလိုပါက ဆက်သွယ်နိုင်ပါသည်။</p>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="flex items-center gap-3 px-6 py-3 bg-[#0088cc] hover:bg-[#0077b5] rounded-lg text-white font-bold transition-transform hover:translate-y-[-3px] shadow-lg">
+                        <i class="fab fa-telegram text-2xl"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-6 py-3 bg-[#7360f2] hover:bg-[#5f4dd0] rounded-lg text-white font-bold transition-transform hover:translate-y-[-3px] shadow-lg">
+                        <i class="fab fa-viber text-2xl"></i>
+                        <span>Viber</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-6 py-3 bg-[#1877f2] hover:bg-[#166fe5] rounded-lg text-white font-bold transition-transform hover:translate-y-[-3px] shadow-lg">
+                        <i class="fab fa-facebook text-2xl"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-gray-700">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-phone-alt text-neonGold"></i>
+                            <span>09-123456789</span>
+                        </div>
+                        <div class="hidden md:block text-gray-600">|</div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-neonGold"></i>
+                            <span>support@ylagameshop.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-4 flex justify-center items-center gap-3">
+                <!-- Footer Logo -->
+                <img src="https://placehold.co/100x100/1e293b/FFD700?text=LOGO" alt="YLA Logo" class="w-8 h-8 rounded-full border border-neonGold">
+                <span class="text-xl font-bold font-gaming text-white">YLA <span class="text-neonGold">GAME SHOP</span></span>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2023 YLA Game Shop. All rights reserved. <br>
+                Designed for Gamers.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Glass Effect on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.style.background = 'rgba(5, 5, 5, 0.9)';
+                navbar.style.borderColor = 'rgba(255, 215, 0, 0.3)'; // Gold border on scroll
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.style.background = 'rgba(5, 5, 5, 0.8)';
+                navbar.style.borderColor = 'rgba(255, 215, 0, 0.1)';
+            }
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
